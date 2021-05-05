@@ -127,6 +127,7 @@ class App extends Component {
                     <div class="content text-center">
                         <h1>Calculator Browser Aapplication</h1>
                         <img src="https://raw.githubusercontent.com/InigoRomero/42ItTest/main/nodeJS/captures/icon.png?token=AK5DQM5DJC3HF4ZI6JZM4STATFGJ4" className="iconImg" />
+                        <img src="/logo512.png" className="iconReact" / >
                         <p>by Iromero-</p>
                         <br></br>
                     </div>
@@ -137,7 +138,7 @@ class App extends Component {
                                     <img src="https://raw.githubusercontent.com/InigoRomero/42ItTest/main/42Icon.jpeg?token=AK5DQMZPDGPOKG2TZ3CF6XDATK74Y" id="icon" alt="User Icon" />
                                 </div>
                                 <form>
-                                    <a href="https://api.intra.42.fr/oauth/authorize?client_id=3390c897e9313d75feb7518f9aa8ea1024e200d81915588048d7b337f9758f57&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback&response_type=code"><button type="button" class="btn btn-success">Log in</button></a>
+                                    <a href="https://api.intra.42.fr/oauth/authorize?client_id=3390c897e9313d75feb7518f9aa8ea1024e200d81915588048d7b337f9758f57&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback&response_type=code">Log in</a>
                                 </form>
                                 <div id="formFooter">
                                     <p class="underlineHover"> You can only access it if you are from 42 :) </p>

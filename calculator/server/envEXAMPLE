@@ -1,0 +1,5 @@
+CLIENT_ID=
+CLIENT_SECRET=
+ACCESS_TOKEN_URI=https://api.intra.42.fr/oauth/token
+AUTHORIZATION_URI=https://api.intra.42.fr/oauth
+REDIRECT_URI=http://localhost:8080/callback

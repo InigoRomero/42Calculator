@@ -3,6 +3,8 @@ var express = require('express'),
 		app = express(),
 		path = require('path');
 
+		const fs = require('fs');
+
 app.use(session({
 	secret: '1234567890QWERTY',
 	resave: true,
@@ -34,7 +36,9 @@ app.get('/callback', function (req, res) {
 				'Authorization': 'Bearer ' + token
 			  }
 			}).then(function (response) {
-			  res.send({me: response.data});
+				let data = JSON.stringify(response.data);
+				fs.writeFileSync('me.json', data);
+				res.redirect("http://localhost:3000/calculator");
 			})
 			.catch(function (error) {
 			  res.send({me: 'Bad request.'});

@@ -1,5 +1,5 @@
 # calculatorReact&Node
-
+calculator where you can only access if you are 42, because we are cool
 # USAGE
 
 ```shell
@@ -20,6 +20,15 @@ Then open http://localhost:3000 :)
 ### Home
 ![home](https://github.com/InigoRomero/calculatorReact/blob/main/captures/home.png)
 
+
+Steps to follow if I had more time:
+### To DO
+
+- [ ] Create sessions
+- [ ] add more function to calculator
+- [ ] Get better loading and calculator style
+- [ ] get the user of 42 info in DB and not in json
+- [ ] Clean and organizate better de code
 # DOC
 - https://medium.com/@nitinpatel_20236/how-to-build-a-simple-calculator-application-with-react-js-bc10a4568bbd
 - https://www.digitalocean.com/community/tutorials/react-axios-react-es

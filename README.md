@@ -9,7 +9,7 @@ Fill .env with your SERECRET and UID
 Docker-compose build
 Docker-compose up
 ```
-Then open http://localhost :)
+Then open http://localhost:3000 :)
 # web Flow
 ### Login
 ![Login](https://github.com/InigoRomero/calculatorReact/blob/main/captures/Login.png)

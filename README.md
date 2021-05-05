@@ -8,6 +8,12 @@ mv server/envEXAMPLE server/.env
 Fill .env with your SERECRET and UID
 Docker-compose build
 Docker-compose up
+docker-compose exec client  npm install axios
+docker-compose exec client  npm install react-json-view
+docker-compose exec server  npm install express
+docker-compose exec server  npm install express-session
+docker-compose exec server  npm install dotenv
+reaload One file to auto Save de container
 ```
 Then open http://localhost:3000 :)
 # web Flow

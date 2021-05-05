@@ -4,12 +4,14 @@ var express = require('express'),
 		path = require('path');
 
 		const fs = require('fs');
-
-app.use(session({
-	secret: '1234567890QWERTY',
-	resave: true,
-	saveUninitialized: false
-}));
+		
+		app.use(session({
+			secret: '1234567890QWERTY',
+			resave: true,
+			saveUninitialized: false
+		}));
+		var cors = require('cors')
+app.use(cors()) 
 const axios = require('axios');
 var ClientOAuth2 = require('client-oauth2')
 require('dotenv').config()
@@ -41,12 +43,21 @@ app.get('/callback', function (req, res) {
 				res.redirect("http://localhost:3000/calculator");
 			})
 			.catch(function (error) {
-			  res.send({me: 'Bad request.'});
+				fs.writeFileSync('me.json',  {"bad":"bad"});
+				res.redirect("http://localhost:3000/calculator");
 			});
 		})
-	})
+	}).catch(function (error) {
+		fs.writeFileSync('me.json', {"bad":"bad"});
+		res.redirect("http://localhost:3000/calculator");
+	  });
 });
 
+app.get('/me', function (req, res) {
+	let rawdata = fs.readFileSync('me.json');
+	let me = JSON.parse(rawdata);
+	res.send({me});
+});
 
 app.get('/', function (req, res) {
 	res.render(path.join(__dirname + '/index.ejs'));
